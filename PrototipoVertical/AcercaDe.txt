@@ -1,0 +1,14 @@
+Justificación/Funcionamiento:
+En la carpeta de Arduino, se encuentra un programa que se encarga de leer
+las señales recibidas por un sensor/encoder de herradura o Velocímetro (FC-03)
+y las señales de un sensor ultrasonico o ultrasónico (HC-SR04 o SRF05).
+El velocímetro se utiliza para medir las revoluciones por minuto a las que gira una rueda dentada de 3 milímetros de grosor a través del sensor, para posteriormente usar ese dato en el motor Unity.
+El sensor Ultrasonido mide la proximidad en centímetros entre un objeto y el sensor. En unity se utilizará para saber cuando activar o desactivar un parámetro en concreto.
+
+
+Conexiones:
+Ambos sensores se conectan a la placa Arduino. El ultrasonido requiere de una carga de 5V, mientras que el velocímetro puede trabajar con 3.3V, por lo que el montaje pued hacerse en paralelo, utilizando una baquela o protoboard para distribuír la energía del puerto de 5V entre ambos sensores, o hacer una conexión directa utilizando la entrada de 3.3V para el velocímetro y la de 5V para el Ultrasonido.
+
+
+Se conecta el Velocímetro desde los puertos DO, GND y VCC, al Puerto digital 3~, entrada GND y entrada de 3.3V de la placa de arduino, respectivamente. 
+Para el Ultrasonido, se conecta el puerto VCC, Trigger, Echo y GND a 5V, Puerto Digital 11, Puerto Digital 12 y GND, respectivamente.

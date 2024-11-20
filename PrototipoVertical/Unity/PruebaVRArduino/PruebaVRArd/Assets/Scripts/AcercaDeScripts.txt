@@ -1,0 +1,8 @@
+Para este programa se utilizan 2 scripts: Uno para triggers de audio (todos en el GameObj "Colliders") y otro para el desplazamiento del jugador utilizando 2 sensores con una placa arduino: Velocímetro y Ultrasonido.
+
+Una vez realizada la conexión y confirmado el puerto al que se encuentra conectada la placa de Arduino, se reemplaza en el Script "MoveUltrasVeloc.cs" el puerto correspondiente (COM3 por COM9, por ejemplo).
+
+Lo ideal es que, al mover la rueda que va con el velocímetro (sea hacia delante o hacia atrás) el jugador se desplace hacia delante. Para que vaya hacia atrás, el Ultrasonido debe detectar un objeto que esté entre 0 y "x" centímetros. De esta manera, el valor para el desplazamiento se multiplicará por -1, haciendo que el desplazamiento sea hacia atrás.
+
+
+NOTA: Revisar la condición para el Ultrasonido en el script, ya que en ocasiones puede no funcionar como debería, sea por los signos de la condición o la distancia mínima que lee el sensor para empezar a funcionar.
